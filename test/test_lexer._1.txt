@@ -1,0 +1,7 @@
+import stdio;
+int
+main(int argc, char** argv)
+{
+    printf("Hello, World!\n");/* 打个招呼吧 */
+    return 0;
+}
