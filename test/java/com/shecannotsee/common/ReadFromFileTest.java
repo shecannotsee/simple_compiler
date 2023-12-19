@@ -14,13 +14,13 @@ public class ReadFromFileTest {
 
 class Test {
     public static boolean t1() {
-        String __ = ReadFromFile.pathName("resource/test_lexer._1.txt");
-        if (__ != null) {
-            for (char ___ : __.toCharArray()) {
-                if (___ == '\n') {
+        String recvFromFile = ReadFromFile.pathName("resource/test_lexer._1.txt");
+        if (recvFromFile != null) {
+            for (char singleChar : recvFromFile.toCharArray()) {
+                if (singleChar == '\n') {
                     System.out.print("[LF]\n");
                 } else {
-                    System.out.print(___);
+                    System.out.print(singleChar);
                 }
             }
         }
