@@ -44,34 +44,34 @@ public class Token {
         Token temp = new Token();
         for (char ch : characterStream.toCharArray()) {
             /**/ if (Objects.equals(ch, Constants.FUNCTION_START)) {
-                Token.checkAndAdd(temp, TokenStream, ch, TokenType.FUNCTION_START);
+                temp = Token.checkAndAdd(temp, TokenStream, ch, TokenType.FUNCTION_START);
             }
             else if (Objects.equals(ch, Constants.FUNCTION_END)) {
-                Token.checkAndAdd(temp, TokenStream, ch, TokenType.FUNCTION_END);
+                temp = Token.checkAndAdd(temp, TokenStream, ch, TokenType.FUNCTION_END);
             }
             else if (Objects.equals(ch, Constants.PARAM_START)) {
-                Token.checkAndAdd(temp, TokenStream, ch, TokenType.PARAM_START);
+                temp = Token.checkAndAdd(temp, TokenStream, ch, TokenType.PARAM_START);
             }
             else if (Objects.equals(ch, Constants.PARAM_END)) {
-                Token.checkAndAdd(temp, TokenStream, ch, TokenType.PARAM_END);
+                temp = Token.checkAndAdd(temp, TokenStream, ch, TokenType.PARAM_END);
             }
             else if (Objects.equals(ch, Constants.BODY_START)) {
-                Token.checkAndAdd(temp, TokenStream, ch, TokenType.BODY_START);
+                temp = Token.checkAndAdd(temp, TokenStream, ch, TokenType.BODY_START);
             }
             else if (Objects.equals(ch, Constants.BODY_END)) {
-                Token.checkAndAdd(temp, TokenStream, ch, TokenType.BODY_END);
+                temp = Token.checkAndAdd(temp, TokenStream, ch, TokenType.BODY_END);
             }
             else if (Objects.equals(ch, Constants.SEMICOLON)) {
-                Token.checkAndAdd(temp, TokenStream, ch, TokenType.SEMICOLON);
+                temp = Token.checkAndAdd(temp, TokenStream, ch, TokenType.SEMICOLON);
             }
             else if (Objects.equals(ch, Constants.SPACE)) {
-                Token.checkAndAdd(temp, TokenStream, ch, TokenType.SPACE);
+                temp = Token.checkAndAdd(temp, TokenStream, ch, TokenType.SPACE);
             }
             else if (Objects.equals(ch, Constants.LINE_BREAK)) {
-                Token.checkAndAdd(temp, TokenStream, ch, TokenType.LINE_BREAK);
+                temp = Token.checkAndAdd(temp, TokenStream, ch, TokenType.LINE_BREAK);
             }
             else if (Objects.equals(ch, Constants.NOTE)) {
-                Token.checkAndAdd(temp, TokenStream, ch, TokenType.NOTE);
+                temp = Token.checkAndAdd(temp, TokenStream, ch, TokenType.NOTE);
             }
             else {
                 temp.value += ch;
@@ -93,7 +93,7 @@ class Constants {
     public static final char BODY_END         = '}';
     public static final char SEMICOLON        = ';';
     public static final char SPACE            = ' ';
-    public static final char LINE_BREAK       = 'n';
+    public static final char LINE_BREAK       = '\n';
     public static final char NOTE             = '#';
 
 }
